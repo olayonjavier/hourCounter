@@ -5,9 +5,12 @@ import java.util.Scanner;
 
 public class HourCounter {
 
+	static Scanner input = new Scanner(System.in);
+	
+	static final int MIN_IN_HOUR = 60;
 	
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		
 		
 		System.out.println("Enter how many days worked: ");
 		int days = input.nextInt();
@@ -17,13 +20,27 @@ public class HourCounter {
 		
 		for(int currentDay = 1; currentDay <= days; currentDay++){
 			System.out.println("Enter minutes for day " + currentDay);
-			minutes += input.nextInt();
+			minutes += getMinutes();
 		}	
 		
-		totalHours = minutes / 60;
-		remainderMinutes = minutes % 60;
+		totalHours = convertMinutesToHours(minutes);
+		remainderMinutes = getRemainderMinutes(minutes);
 		
-		System.out.println("Total Hours = " + totalHours + " " + remainderMinutes + " minutes");
+		System.out.println("Total Time Worked = " + totalHours + " hours and " + remainderMinutes + " minutes");
 	}
+	
+	public static int getMinutes(){
+
+		return input.nextInt();
+	}
+	
+	public static int convertMinutesToHours(int totalMinutes){
+		return totalMinutes / MIN_IN_HOUR;
+	}
+	
+	public static int getRemainderMinutes(int totalMinutes){
+		return totalMinutes % MIN_IN_HOUR;
+	}
+	
 	
 }
