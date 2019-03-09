@@ -14,7 +14,6 @@ public class HourCounter {
 		System.out.println("Enter how many days worked: ");
 		int days = input.nextInt();
 		int minutes = 0;
-		int totalHours = 0;
 		int remainderMinutes = 0;
 		
 		for(int currentDay = 1; currentDay <= days; currentDay++){
