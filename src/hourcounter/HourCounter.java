@@ -10,29 +10,58 @@ public class HourCounter {
 	static final int MAX_HOURS = 20;
 	
 	public static void main(String[] args) {
+		System.out.println("If you're like to enter hours worked enter 'h' else enter 'm' for minutes worked.");
+		String format = input.next();
+		
 		
 		System.out.println("Enter how many days worked: ");
 		int days = input.nextInt();
+		int hours = 0;
 		int minutes = 0;
 		int remainderMinutes = 0;
 		
-		for(int currentDay = 1; currentDay <= days; currentDay++){
-			System.out.println("Enter minutes for day " + currentDay);
-			minutes += getMinutes();
-		}	
+		if(format.equals("h")){
+			for(int currentDay = 1; currentDay <= days; currentDay++){
+				System.out.println("Enter hours for day " + currentDay);
+				hours += getHours();
+				System.out.println("Enter minutes for day " + currentDay);
+				minutes += getMinutes();
+			}
+			hours += convertMinutesToHours(minutes);
+			remainderMinutes = getRemainderMinutes(minutes);
+			
+			System.out.println("Total Time Worked = " + hours + " hours and " + remainderMinutes + " minutes");
+			System.out.println("Remaining Hours = " + getMissingHours((convertHoursToMinutes(hours)) + remainderMinutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+		}
+		else{
+			for(int currentDay = 1; currentDay <= days; currentDay++){
+				System.out.println("Enter minutes for day " + currentDay);
+				minutes += getMinutes();
+			}	
 		
-		remainderMinutes = getRemainderMinutes(minutes);
+			remainderMinutes = getRemainderMinutes(minutes);
 		
-		System.out.println("Total Time Worked = " + convertMinutesToHours(minutes) + " hours and " + remainderMinutes + " minutes");
-		System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+			System.out.println("Total Time Worked = " + convertMinutesToHours(minutes) + " hours and " + remainderMinutes + " minutes");
+			System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+		}
+		
+		
 	}
 	
 	public static int getMinutes(){
 		return input.nextInt();
 	}
 	
+	public static int getHours(){
+		return input.nextInt();
+	}
+	
 	public static int convertMinutesToHours(int totalMinutes){
 		return totalMinutes / MIN_IN_HOUR;
+	}
+	
+	public static int convertHoursToMinutes(int totalHours){
+		return totalHours * MIN_IN_HOUR;
 	}
 	
 	public static int getRemainderMinutes(int totalMinutes){
@@ -46,8 +75,10 @@ public class HourCounter {
 	}
 	
 	public static int getMissingMinutes(int remainderMinutes){
+		if(remainderMinutes == 0){
+			return 0;
+		}
 		return MIN_IN_HOUR - remainderMinutes;
 	}
-	
 	
 }
