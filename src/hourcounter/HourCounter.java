@@ -10,17 +10,23 @@ public class HourCounter {
 	static final int MAX_HOURS = 20;
 	
 	public static void main(String[] args) {
-		System.out.println("If you're like to enter hours worked enter 'h' else enter 'm' for minutes worked.");
-		String format = input.next();
+		
+		String format = setTimeFormat();
 		
 		
-		System.out.println("Enter how many days worked: ");
-		int days = input.nextInt();
+		
+		
+		
 		int hours = 0;
 		int minutes = 0;
 		int remainderMinutes = 0;
 		
+		while(format.equals("h") || format.equals("m")){
+		
+		
+		
 		if(format.equals("h")){
+			int days = setDaysWorked();
 			for(int currentDay = 1; currentDay <= days; currentDay++){
 				System.out.println("Enter hours for day " + currentDay);
 				hours += getHours();
@@ -33,7 +39,8 @@ public class HourCounter {
 			System.out.println("Total Time Worked = " + hours + " hours and " + remainderMinutes + " minutes");
 			System.out.println("Remaining Hours = " + getMissingHours((convertHoursToMinutes(hours)) + remainderMinutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
 		}
-		else{
+		else if(format.equals("m")){
+			int days = setDaysWorked();
 			for(int currentDay = 1; currentDay <= days; currentDay++){
 				System.out.println("Enter minutes for day " + currentDay);
 				minutes += getMinutes();
@@ -45,7 +52,19 @@ public class HourCounter {
 			System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
 		}
 		
-		
+		}
+	}
+	
+	
+	
+	public static int setDaysWorked(){
+		System.out.println("Enter how many days worked: ");
+		return input.nextInt();
+	}
+	
+	public static String setTimeFormat(){
+		System.out.println("If you'd like to enter hours worked enter 'h' else enter 'm' for minutes worked.");
+		return input.next();
 	}
 	
 	public static int getMinutes(){
