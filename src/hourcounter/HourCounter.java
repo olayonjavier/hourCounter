@@ -11,19 +11,13 @@ public class HourCounter {
 	
 	public static void main(String[] args) {
 		
-		String format = setTimeFormat();
+            String format = setTimeFormat();
 		
+            int hours = 0;
+            int minutes = 0;
+            int remainderMinutes = 0;
 		
-		
-		
-		
-		int hours = 0;
-		int minutes = 0;
-		int remainderMinutes = 0;
-		
-		while(format.equals("h") || format.equals("m")){
-		
-		
+            while(format.equals("h") || format.equals("m")){
 		
 		if(format.equals("h")){
 			int days = setDaysWorked();
@@ -52,7 +46,7 @@ public class HourCounter {
 			System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
 		}
 		
-		}
+            }
 	}
 	
 	

@@ -26,22 +26,52 @@ public class Frame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        hours = new javax.swing.JTextField();
+        monHours = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        minutes = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        monMins = new javax.swing.JTextField();
+        mondayCheckBox = new javax.swing.JCheckBox();
+        tuesHours = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        tuesMins = new javax.swing.JTextField();
+        tuesdayCheckBox = new javax.swing.JCheckBox();
+        wedHours = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        wedMins = new javax.swing.JTextField();
+        wednesdayCheckBox = new javax.swing.JCheckBox();
+        thursHours = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        thursMins = new javax.swing.JTextField();
+        thursdayCheckBox = new javax.swing.JCheckBox();
+        friHours = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        friMins = new javax.swing.JTextField();
+        fridayCheckBox = new javax.swing.JCheckBox();
+        satHours = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        satMins = new javax.swing.JTextField();
+        saturdayCheckBox = new javax.swing.JCheckBox();
+        sunHours = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        sunMins = new javax.swing.JTextField();
+        sundayCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hours Calculator");
         setLocation(new java.awt.Point(760, 390));
         setResizable(false);
 
-        hours.setName(""); // NOI18N
-        hours.addActionListener(new java.awt.event.ActionListener() {
+        monHours.setEnabled(false);
+        monHours.setName(""); // NOI18N
+        monHours.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hoursActionPerformed(evt);
+                monHoursActionPerformed(evt);
             }
         });
 
@@ -49,17 +79,173 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel2.setText("Minutes:");
 
-        minutes.addActionListener(new java.awt.event.ActionListener() {
+        monMins.setEnabled(false);
+        monMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minutesActionPerformed(evt);
+                monMinsActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Days Worked:");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        mondayCheckBox.setText("Monday");
+        mondayCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                mondayCheckBoxActionPerformed(evt);
+            }
+        });
+
+        tuesHours.setEnabled(false);
+        tuesHours.setName(""); // NOI18N
+        tuesHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tuesHoursActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("Hours:");
+
+        jLabel10.setText("Minutes:");
+
+        tuesMins.setEnabled(false);
+        tuesMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tuesMinsActionPerformed(evt);
+            }
+        });
+
+        tuesdayCheckBox.setText("Tuesday");
+        tuesdayCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tuesdayCheckBoxActionPerformed(evt);
+            }
+        });
+
+        wedHours.setEnabled(false);
+        wedHours.setName(""); // NOI18N
+        wedHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wedHoursActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Hours:");
+
+        jLabel12.setText("Minutes:");
+
+        wedMins.setEnabled(false);
+        wedMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wedMinsActionPerformed(evt);
+            }
+        });
+
+        wednesdayCheckBox.setText("Wednesday");
+        wednesdayCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wednesdayCheckBoxActionPerformed(evt);
+            }
+        });
+
+        thursHours.setEnabled(false);
+        thursHours.setName(""); // NOI18N
+        thursHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thursHoursActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("Hours:");
+
+        jLabel14.setText("Minutes:");
+
+        thursMins.setEnabled(false);
+        thursMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thursMinsActionPerformed(evt);
+            }
+        });
+
+        thursdayCheckBox.setText("Thursday");
+        thursdayCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thursdayCheckBoxActionPerformed(evt);
+            }
+        });
+
+        friHours.setEnabled(false);
+        friHours.setName(""); // NOI18N
+        friHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                friHoursActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("Hours:");
+
+        jLabel16.setText("Minutes:");
+
+        friMins.setEnabled(false);
+        friMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                friMinsActionPerformed(evt);
+            }
+        });
+
+        fridayCheckBox.setText("Friday");
+        fridayCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fridayCheckBoxActionPerformed(evt);
+            }
+        });
+
+        satHours.setEnabled(false);
+        satHours.setName(""); // NOI18N
+        satHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                satHoursActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setText("Hours:");
+
+        jLabel18.setText("Minutes:");
+
+        satMins.setEnabled(false);
+        satMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                satMinsActionPerformed(evt);
+            }
+        });
+
+        saturdayCheckBox.setText("Saturday");
+        saturdayCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saturdayCheckBoxActionPerformed(evt);
+            }
+        });
+
+        sunHours.setEnabled(false);
+        sunHours.setName(""); // NOI18N
+        sunHours.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sunHoursActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("Hours:");
+
+        jLabel20.setText("Minutes:");
+
+        sunMins.setEnabled(false);
+        sunMins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sunMinsActionPerformed(evt);
+            }
+        });
+
+        sundayCheckBox.setText("Sunday");
+        sundayCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sundayCheckBoxActionPerformed(evt);
             }
         });
 
@@ -68,53 +254,300 @@ public class Frame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
+                    .addComponent(mondayCheckBox)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(hours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(monHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(minutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(monMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)))
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tuesdayCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tuesHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(tuesMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel10)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(wednesdayCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(wedHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(wedMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel12)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(thursdayCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(thursHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(thursMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel14)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fridayCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(friHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(friMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel16)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(saturdayCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel18)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sundayCheckBox)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(sunHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(sunMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel20)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel3)
-                .addGap(13, 13, 13)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(minutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(85, 85, 85)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(sundayCheckBox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(sunHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sunMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(saturdayCheckBox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel18))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(fridayCheckBox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(friHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(friMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(thursdayCheckBox)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel13)
+                                .addComponent(jLabel14))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(thursHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(thursMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(wednesdayCheckBox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(wedHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(wedMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(tuesdayCheckBox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(tuesHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tuesMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(mondayCheckBox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(monHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(monMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void hoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hoursActionPerformed
+    private void monHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monHoursActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_hoursActionPerformed
+    }//GEN-LAST:event_monHoursActionPerformed
 
-    private void minutesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minutesActionPerformed
+    private void monMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_monMinsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_minutesActionPerformed
+    }//GEN-LAST:event_monMinsActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void mondayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mondayCheckBoxActionPerformed
+        if(mondayCheckBox.isSelected()){
+            monHours.setEnabled(true);
+            monMins.setEnabled(true);
+        }
+        else if(!mondayCheckBox.isSelected()){
+            monHours.setEnabled(false);
+            monMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_mondayCheckBoxActionPerformed
+
+    private void tuesHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tuesHoursActionPerformed
+        
+    }//GEN-LAST:event_tuesHoursActionPerformed
+
+    private void tuesMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tuesMinsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tuesMinsActionPerformed
+
+    private void tuesdayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tuesdayCheckBoxActionPerformed
+        if(tuesdayCheckBox.isSelected()){
+            tuesHours.setEnabled(true);
+            tuesMins.setEnabled(true);
+        }
+        else if(!tuesdayCheckBox.isSelected()){
+            tuesHours.setEnabled(false);
+            tuesMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_tuesdayCheckBoxActionPerformed
+
+    private void wedHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wedHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wedHoursActionPerformed
+
+    private void wedMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wedMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wedMinsActionPerformed
+
+    private void wednesdayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wednesdayCheckBoxActionPerformed
+        if(wednesdayCheckBox.isSelected()){
+            wedHours.setEnabled(true);
+            wedMins.setEnabled(true);
+        }
+        else if(!wednesdayCheckBox.isSelected()){
+            wedHours.setEnabled(false);
+            wedMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_wednesdayCheckBoxActionPerformed
+
+    private void thursHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thursHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_thursHoursActionPerformed
+
+    private void thursMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thursMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_thursMinsActionPerformed
+
+    private void thursdayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thursdayCheckBoxActionPerformed
+        if(thursdayCheckBox.isSelected()){
+            thursHours.setEnabled(true);
+            thursMins.setEnabled(true);
+        }
+        else if(!thursdayCheckBox.isSelected()){
+            thursHours.setEnabled(false);
+            thursMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_thursdayCheckBoxActionPerformed
+
+    private void friHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_friHoursActionPerformed
+
+    private void friMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_friMinsActionPerformed
+
+    private void fridayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fridayCheckBoxActionPerformed
+        if(fridayCheckBox.isSelected()){
+            friHours.setEnabled(true);
+            friMins.setEnabled(true);
+        }
+        else if(!fridayCheckBox.isSelected()){
+            friHours.setEnabled(false);
+            friMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_fridayCheckBoxActionPerformed
+
+    private void satHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_satHoursActionPerformed
+
+    private void satMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_satMinsActionPerformed
+
+    private void saturdayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saturdayCheckBoxActionPerformed
+        if(saturdayCheckBox.isSelected()){
+            satHours.setEnabled(true);
+            satMins.setEnabled(true);
+        }
+        else if(!saturdayCheckBox.isSelected()){
+            satHours.setEnabled(false);
+            satMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_saturdayCheckBoxActionPerformed
+
+    private void sunHoursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sunHoursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sunHoursActionPerformed
+
+    private void sunMinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sunMinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sunMinsActionPerformed
+
+    private void sundayCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sundayCheckBoxActionPerformed
+        if(sundayCheckBox.isSelected()){
+            sunHours.setEnabled(true);
+            sunMins.setEnabled(true);
+        }
+        else if(!sundayCheckBox.isSelected()){
+            sunHours.setEnabled(false);
+            sunMins.setEnabled(false);
+        }
+    }//GEN-LAST:event_sundayCheckBoxActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -152,11 +585,40 @@ public class Frame extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField hours;
+    private javax.swing.JTextField friHours;
+    private javax.swing.JTextField friMins;
+    private javax.swing.JCheckBox fridayCheckBox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField minutes;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField monHours;
+    private javax.swing.JTextField monMins;
+    private javax.swing.JCheckBox mondayCheckBox;
+    private javax.swing.JTextField satHours;
+    private javax.swing.JTextField satMins;
+    private javax.swing.JCheckBox saturdayCheckBox;
+    private javax.swing.JTextField sunHours;
+    private javax.swing.JTextField sunMins;
+    private javax.swing.JCheckBox sundayCheckBox;
+    private javax.swing.JTextField thursHours;
+    private javax.swing.JTextField thursMins;
+    private javax.swing.JCheckBox thursdayCheckBox;
+    private javax.swing.JTextField tuesHours;
+    private javax.swing.JTextField tuesMins;
+    private javax.swing.JCheckBox tuesdayCheckBox;
+    private javax.swing.JTextField wedHours;
+    private javax.swing.JTextField wedMins;
+    private javax.swing.JCheckBox wednesdayCheckBox;
     // End of variables declaration//GEN-END:variables
 }
