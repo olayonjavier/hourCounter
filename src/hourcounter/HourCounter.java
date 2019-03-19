@@ -11,42 +11,44 @@ public class HourCounter {
 	
 	public static void main(String[] args) {
 		
-            String format = setTimeFormat();
+        String format = setTimeFormat();
 		
-            int hours = 0;
-            int minutes = 0;
-            int remainderMinutes = 0;
+        int hours = 0;
+        int minutes = 0;
+        int remainderMinutes = 0;
 		
-            while(format.equals("h") || format.equals("m")){
+        while(format.equals("h") || format.equals("m")){
 		
-		if(format.equals("h")){
-			int days = setDaysWorked();
-			for(int currentDay = 1; currentDay <= days; currentDay++){
-				System.out.println("Enter hours for day " + currentDay);
-				hours += getHours();
-				System.out.println("Enter minutes for day " + currentDay);
-				minutes += getMinutes();
-			}
-			hours += convertMinutesToHours(minutes);
-			remainderMinutes = getRemainderMinutes(minutes);
+			if(format.equals("h")){
+				int days = setDaysWorked();
+				for(int currentDay = 1; currentDay <= days; currentDay++){
+					System.out.println("Enter hours for day " + currentDay);
+					hours += getHours();
+					System.out.println("Enter minutes for day " + currentDay);
+					minutes += getMinutes();
+				}
+				hours += convertMinutesToHours(minutes);
+				remainderMinutes = getRemainderMinutes(minutes);
 			
-			System.out.println("Total Time Worked = " + hours + " hours and " + remainderMinutes + " minutes");
-			System.out.println("Remaining Hours = " + getMissingHours((convertHoursToMinutes(hours)) + remainderMinutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
-		}
-		else if(format.equals("m")){
-			int days = setDaysWorked();
-			for(int currentDay = 1; currentDay <= days; currentDay++){
-				System.out.println("Enter minutes for day " + currentDay);
-				minutes += getMinutes();
-			}	
+				System.out.println("Total Time Worked = " + hours + " hours and " + remainderMinutes + " minutes");
+				System.out.println("Remaining Hours = " + getMissingHours((convertHoursToMinutes(hours)) + remainderMinutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+				format = "exit";
+			}
+			else if(format.equals("m")){
+				int days = setDaysWorked();
+				for(int currentDay = 1; currentDay <= days; currentDay++){
+					System.out.println("Enter minutes for day " + currentDay);
+					minutes += getMinutes();
+				}	
 		
-			remainderMinutes = getRemainderMinutes(minutes);
+				remainderMinutes = getRemainderMinutes(minutes);
 		
-			System.out.println("Total Time Worked = " + convertMinutesToHours(minutes) + " hours and " + remainderMinutes + " minutes");
-			System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
-		}
+				System.out.println("Total Time Worked = " + convertMinutesToHours(minutes) + " hours and " + remainderMinutes + " minutes");
+				System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+				format = "exit";
+			}
 		
-            }
+        }
 	}
 	
 	
