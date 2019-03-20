@@ -61,9 +61,9 @@ public class Frame extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         sunMins = new javax.swing.JTextField();
         sundayCheckBox = new javax.swing.JCheckBox();
-        totalHours = new javax.swing.JTextField();
+        outHours = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        totalMinutes = new javax.swing.JTextField();
+        outMinutes = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         remaininglHours = new javax.swing.JTextField();
@@ -258,11 +258,11 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
-        totalHours.setEditable(false);
+        outHours.setEditable(false);
 
         jLabel3.setText("Total Hours:");
 
-        totalMinutes.setEditable(false);
+        outMinutes.setEditable(false);
 
         jLabel4.setText("Total Minutes");
 
@@ -357,7 +357,7 @@ public class Frame extends javax.swing.JFrame {
                         .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(totalHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(outHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
                             .addComponent(remaininglHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -373,7 +373,7 @@ public class Frame extends javax.swing.JFrame {
                         .addComponent(jLabel19)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel20))
-                    .addComponent(totalMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(outMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(remaininglMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
@@ -464,8 +464,8 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(totalHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(totalMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(outHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(outMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -619,7 +619,44 @@ public class Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_sundayCheckBoxActionPerformed
 
     private void calculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateActionPerformed
-        // TODO add your handling code here:
+        int totalHours = 0;
+        int totalMinutes = 0;
+        if(mondayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(monHours.getText());
+            totalMinutes += Integer.parseInt(monMins.getText());
+            
+        }
+        if(tuesdayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(tuesHours.getText());
+            totalMinutes += Integer.parseInt(tuesMins.getText());
+        }
+        if(wednesdayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(wedHours.getText());
+            totalMinutes += Integer.parseInt(wedMins.getText());
+        }
+        if(thursdayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(thursHours.getText());
+            totalMinutes += Integer.parseInt(thursMins.getText());
+        }
+        if(fridayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(friHours.getText());
+            totalMinutes += Integer.parseInt(friMins.getText());
+        }
+        if(saturdayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(satHours.getText());
+            totalMinutes += Integer.parseInt(satMins.getText());
+        }
+        if(sundayCheckBox.isSelected()){
+            totalHours += Integer.parseInt(sunHours.getText());
+            totalMinutes += Integer.parseInt(sunMins.getText());
+        }
+        
+        totalHours += hourcounter.HourCounter.convertMinutesToHours(totalMinutes);
+        totalMinutes = hourcounter.HourCounter.getRemainderMinutes(totalMinutes);
+        outHours.setText("" + totalHours);
+        outMinutes.setText("" + totalMinutes);
+        System.out.println(totalHours);
+        System.out.println(totalMinutes);
     }//GEN-LAST:event_calculateActionPerformed
 
 	/**
@@ -683,6 +720,8 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField monHours;
     private javax.swing.JTextField monMins;
     private javax.swing.JCheckBox mondayCheckBox;
+    private javax.swing.JTextField outHours;
+    private javax.swing.JTextField outMinutes;
     private javax.swing.JTextField remaininglHours;
     private javax.swing.JTextField remaininglMinutes;
     private javax.swing.JTextField satHours;
@@ -694,8 +733,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField thursHours;
     private javax.swing.JTextField thursMins;
     private javax.swing.JCheckBox thursdayCheckBox;
-    private javax.swing.JTextField totalHours;
-    private javax.swing.JTextField totalMinutes;
     private javax.swing.JTextField tuesHours;
     private javax.swing.JTextField tuesMins;
     private javax.swing.JCheckBox tuesdayCheckBox;
