@@ -727,7 +727,13 @@ public class Frame extends javax.swing.JFrame {
         outHours.setText("" + totalHours);
         outMinutes.setText("" + totalMinutes);
         
-		remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes));
+		if(workWeek20.isSelected()){
+			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, "20"));
+		}
+		else if(workWeek30.isSelected()){
+			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, "30"));
+		}
+		
 		remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
     }//GEN-LAST:event_calculateActionPerformed
 

@@ -7,7 +7,8 @@ public class HourCounter {
 
 	static Scanner input = new Scanner(System.in);
 	static final int MIN_IN_HOUR = 60;
-	static final int MAX_HOURS = 20;
+	static final int MAX_HOURS20 = 20;
+	static final int MAX_HOURS30 = 30;
 	
 	public static void main(String[] args) {
 		
@@ -31,7 +32,7 @@ public class HourCounter {
 				remainderMinutes = getRemainderMinutes(minutes);
 			
 				System.out.println("Total Time Worked = " + hours + " hours and " + remainderMinutes + " minutes");
-				System.out.println("Remaining Hours = " + getMissingHours((convertHoursToMinutes(hours)) + remainderMinutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+				System.out.println("Remaining Hours = " + getMissingHours((convertHoursToMinutes(hours) + remainderMinutes), "") + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
 				format = "exit";
 			}
 			else if(format.equals("m")){
@@ -44,7 +45,7 @@ public class HourCounter {
 				remainderMinutes = getRemainderMinutes(minutes);
 		
 				System.out.println("Total Time Worked = " + convertMinutesToHours(minutes) + " hours and " + remainderMinutes + " minutes");
-				System.out.println("Remaining Hours = " + getMissingHours(minutes) + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
+				System.out.println("Remaining Hours = " + getMissingHours(minutes, "") + " hours and " + getMissingMinutes(remainderMinutes) + " minutes");
 				format = "exit";
 			}
 		
@@ -83,8 +84,14 @@ public class HourCounter {
 		return totalMinutes % MIN_IN_HOUR;
 	}
 	
-	public static int getMissingHours(int minutes){
-		int missingMinutes = (MAX_HOURS * MIN_IN_HOUR) - minutes;
+	public static int getMissingHours(int minutes, String workWeek){
+		int missingMinutes = 0;
+		if(workWeek.equals("20")){
+			missingMinutes = (MAX_HOURS20 * MIN_IN_HOUR) - minutes;
+		}
+		else if(workWeek.equals("30")){
+			missingMinutes = (MAX_HOURS30 * MIN_IN_HOUR) - minutes;
+		}
 		
 		return convertMinutesToHours(missingMinutes);
 	}
