@@ -1,3 +1,6 @@
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -71,7 +74,7 @@ public class Frame extends javax.swing.JFrame {
         outMinutes = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        remaininglHours = new javax.swing.JTextField();
+        remainingHours = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         remaininglMinutes = new javax.swing.JTextField();
         calculate = new javax.swing.JButton();
@@ -291,7 +294,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel5.setText("Remaining Hours:");
 
-        remaininglHours.setEditable(false);
+        remainingHours.setEditable(false);
 
         jLabel6.setText("Remaining Minutes");
 
@@ -425,7 +428,7 @@ public class Frame extends javax.swing.JFrame {
                                                 .addComponent(jLabel5)
                                                 .addGap(18, 18, 18))
                                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(remaininglHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(remainingHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(remaininglMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -546,7 +549,7 @@ public class Frame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(remaininglMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(remaininglHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(remainingHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
 
@@ -723,8 +726,9 @@ public class Frame extends javax.swing.JFrame {
         totalMinutes = hourcounter.HourCounter.getRemainderMinutes(totalMinutes);
         outHours.setText("" + totalHours);
         outMinutes.setText("" + totalMinutes);
-        System.out.println(totalHours);
-        System.out.println(totalMinutes);
+        
+		remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes));
+		remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
     }//GEN-LAST:event_calculateActionPerformed
 
     private void workWeek20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workWeek20ActionPerformed
@@ -801,7 +805,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JCheckBox mondayCheckBox;
     private javax.swing.JTextField outHours;
     private javax.swing.JTextField outMinutes;
-    private javax.swing.JTextField remaininglHours;
+    private javax.swing.JTextField remainingHours;
     private javax.swing.JTextField remaininglMinutes;
     private javax.swing.JTextField satHours;
     private javax.swing.JTextField satMins;
