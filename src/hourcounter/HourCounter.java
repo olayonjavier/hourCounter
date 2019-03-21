@@ -92,6 +92,9 @@ public class HourCounter {
 		else if(workWeek.equals("30")){
 			missingMinutes = (MAX_HOURS30 * MIN_IN_HOUR) - minutes;
 		}
+		else{
+			missingMinutes = 0;
+		}
 		
 		return convertMinutesToHours(missingMinutes);
 	}
