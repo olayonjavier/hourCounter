@@ -26,6 +26,11 @@ public class Frame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
         monHours = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -72,12 +77,15 @@ public class Frame extends javax.swing.JFrame {
         calculate = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        workWeek20 = new javax.swing.JRadioButton();
+        workWeek30 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hours Calculator");
         setLocation(new java.awt.Point(760, 390));
         setResizable(false);
 
+        monHours.setText("0");
         monHours.setEnabled(false);
         monHours.setName(""); // NOI18N
         monHours.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +98,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel2.setText("Minutes:");
 
+        monMins.setText("0");
         monMins.setEnabled(false);
         monMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +113,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        tuesHours.setText("0");
         tuesHours.setEnabled(false);
         tuesHours.setName(""); // NOI18N
         tuesHours.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +126,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel10.setText("Minutes:");
 
+        tuesMins.setText("0");
         tuesMins.setEnabled(false);
         tuesMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,6 +141,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        wedHours.setText("0");
         wedHours.setEnabled(false);
         wedHours.setName(""); // NOI18N
         wedHours.addActionListener(new java.awt.event.ActionListener() {
@@ -142,6 +154,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel12.setText("Minutes:");
 
+        wedMins.setText("0");
         wedMins.setEnabled(false);
         wedMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,6 +169,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        thursHours.setText("0");
         thursHours.setEnabled(false);
         thursHours.setName(""); // NOI18N
         thursHours.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +182,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel14.setText("Minutes:");
 
+        thursMins.setText("0");
         thursMins.setEnabled(false);
         thursMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +197,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        friHours.setText("0");
         friHours.setEnabled(false);
         friHours.setName(""); // NOI18N
         friHours.addActionListener(new java.awt.event.ActionListener() {
@@ -194,6 +210,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel16.setText("Minutes:");
 
+        friMins.setText("0");
         friMins.setEnabled(false);
         friMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,6 +225,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        satHours.setText("0");
         satHours.setEnabled(false);
         satHours.setName(""); // NOI18N
         satHours.addActionListener(new java.awt.event.ActionListener() {
@@ -220,6 +238,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel18.setText("Minutes:");
 
+        satMins.setText("0");
         satMins.setEnabled(false);
         satMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,6 +253,7 @@ public class Frame extends javax.swing.JFrame {
             }
         });
 
+        sunHours.setText("0");
         sunHours.setEnabled(false);
         sunHours.setName(""); // NOI18N
         sunHours.addActionListener(new java.awt.event.ActionListener() {
@@ -246,6 +266,7 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel20.setText("Minutes:");
 
+        sunMins.setText("0");
         sunMins.setEnabled(false);
         sunMins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,6 +306,17 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel8.setText("Check the days worked then input hours and minutes worked that day.  Click calculate to view total hours/total minutes and remaining hours/remaing minutes.");
 
+        buttonGroup1.add(workWeek20);
+        workWeek20.setText("20 Hour Work Week");
+        workWeek20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                workWeek20ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(workWeek30);
+        workWeek30.setText("30 Hour Work Week");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -292,6 +324,10 @@ public class Frame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(workWeek20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(workWeek30))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(mondayCheckBox)
@@ -348,31 +384,32 @@ public class Frame extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel15)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel16))))
-                            .addComponent(calculate))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(saturdayCheckBox)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel17)
+                                        .addComponent(jLabel16)))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel18))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(sundayCheckBox)
+                                    .addComponent(saturdayCheckBox)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(sunHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel17)
                                         .addGap(18, 18, 18)
-                                        .addComponent(sunMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jLabel18))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel19)
+                                        .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel20))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(27, 27, 27)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(sundayCheckBox)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(sunHours, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(sunMins, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel19)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel20))))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(calculate)
+                                .addGap(57, 57, 57)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -389,11 +426,10 @@ public class Frame extends javax.swing.JFrame {
                                     .addComponent(outMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4)
                                     .addComponent(remaininglMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6))
-                                .addGap(9, 9, 9))))
+                                    .addComponent(jLabel6)))))
                     .addComponent(jLabel7)
                     .addComponent(jLabel8))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,7 +438,11 @@ public class Frame extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
-                .addGap(63, 63, 63)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(workWeek20)
+                    .addComponent(workWeek30))
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(mondayCheckBox)
@@ -414,19 +454,9 @@ public class Frame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(monHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(monMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(saturdayCheckBox)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel18))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(fridayCheckBox)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -470,6 +500,16 @@ public class Frame extends javax.swing.JFrame {
                                             .addComponent(tuesHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(tuesMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(saturdayCheckBox)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel17)
+                                    .addComponent(jLabel18))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(satHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(satMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(sundayCheckBox)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -479,28 +519,29 @@ public class Frame extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(sunHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(sunMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(outHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(outMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(calculate)
-                                .addGap(26, 26, 26))
+                                .addGap(38, 38, 38))
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(outHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(outMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(7, 7, 7)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel5))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(remaininglMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(remaininglHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap())
+                                    .addComponent(remaininglHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(17, Short.MAX_VALUE))))))
         );
 
         pack();
@@ -680,6 +721,10 @@ public class Frame extends javax.swing.JFrame {
         System.out.println(totalMinutes);
     }//GEN-LAST:event_calculateActionPerformed
 
+    private void workWeek20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workWeek20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_workWeek20ActionPerformed
+
 	/**
 	 * @param args the command line arguments
 	 */
@@ -716,6 +761,11 @@ public class Frame extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.JButton calculate;
     private javax.swing.JTextField friHours;
     private javax.swing.JTextField friMins;
@@ -762,5 +812,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JTextField wedHours;
     private javax.swing.JTextField wedMins;
     private javax.swing.JCheckBox wednesdayCheckBox;
+    private javax.swing.JRadioButton workWeek20;
+    private javax.swing.JRadioButton workWeek30;
     // End of variables declaration//GEN-END:variables
 }
