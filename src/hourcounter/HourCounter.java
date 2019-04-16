@@ -93,7 +93,7 @@ public class HourCounter {
 			missingMinutes = (MAX_HOURS30 * MIN_IN_HOUR) - minutes;
 		}
 		else{
-			missingMinutes = 0;
+			missingMinutes = (Integer.parseInt(workWeek) * MIN_IN_HOUR) - minutes;
 		}
 		
 		return convertMinutesToHours(missingMinutes);

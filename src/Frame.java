@@ -36,6 +36,7 @@ public class Frame extends javax.swing.JFrame {
         buttonGroup3 = new javax.swing.ButtonGroup();
         buttonGroup4 = new javax.swing.ButtonGroup();
         buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         mondayCheckBox = new javax.swing.JCheckBox();
@@ -85,6 +86,8 @@ public class Frame extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         monHours = new javax.swing.JFormattedTextField();
         monMins = new javax.swing.JFormattedTextField();
+        workWeekCustom = new javax.swing.JRadioButton();
+        customHourWeekInput = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hours Calculator");
@@ -305,6 +308,11 @@ public class Frame extends javax.swing.JFrame {
 
         buttonGroup1.add(workWeek30);
         workWeek30.setText("30 Hour Work Week");
+        workWeek30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                workWeek30ActionPerformed(evt);
+            }
+        });
 
         jLabel21.setText("Select the amount of hours you'd like to reach by the end of the week using the radio buttons. ");
 
@@ -313,6 +321,16 @@ public class Frame extends javax.swing.JFrame {
 
         monMins.setText("0");
         monMins.setEnabled(false);
+
+        buttonGroup1.add(workWeekCustom);
+        workWeekCustom.setText("Custom Hour Work Week");
+        workWeekCustom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                workWeekCustomActionPerformed(evt);
+            }
+        });
+
+        customHourWeekInput.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -329,7 +347,11 @@ public class Frame extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(workWeek20)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(workWeek30))
+                                .addComponent(workWeek30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(workWeekCustom)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(customHourWeekInput, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -449,7 +471,9 @@ public class Frame extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(workWeek20)
-                    .addComponent(workWeek30))
+                    .addComponent(workWeek30)
+                    .addComponent(workWeekCustom)
+                    .addComponent(customHourWeekInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -525,7 +549,6 @@ public class Frame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(monHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(monMins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -547,7 +570,7 @@ public class Frame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(remaininglMinutes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(remainingHours, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(19, Short.MAX_VALUE))))
+                        .addContainerGap(42, Short.MAX_VALUE))))
         );
 
         monHours.getAccessibleContext().setAccessibleName("");
@@ -725,15 +748,29 @@ public class Frame extends javax.swing.JFrame {
 			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, "30"));
 		}
 		else{
-			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, "0"));
+			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, customHourWeekInput.getText()));
 		}
 		
 		remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
     }//GEN-LAST:event_calculateActionPerformed
 
     private void workWeek20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workWeek20ActionPerformed
-        // TODO add your handling code here:
+        customHourWeekInput.setEnabled(false);
     }//GEN-LAST:event_workWeek20ActionPerformed
+
+    private void workWeekCustomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workWeekCustomActionPerformed
+       
+	   if(workWeekCustom.isSelected()){
+		   customHourWeekInput.setEnabled(true);
+	   }
+	   else if(!workWeekCustom.isSelected()){
+		   customHourWeekInput.setEnabled(false);
+	   }
+    }//GEN-LAST:event_workWeekCustomActionPerformed
+
+    private void workWeek30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workWeek30ActionPerformed
+        customHourWeekInput.setEnabled(false);
+    }//GEN-LAST:event_workWeek30ActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -776,7 +813,9 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.JButton calculate;
+    private javax.swing.JFormattedTextField customHourWeekInput;
     private javax.swing.JTextField friHours;
     private javax.swing.JTextField friMins;
     private javax.swing.JCheckBox fridayCheckBox;
@@ -825,5 +864,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JCheckBox wednesdayCheckBox;
     private javax.swing.JRadioButton workWeek20;
     private javax.swing.JRadioButton workWeek30;
+    private javax.swing.JRadioButton workWeekCustom;
     // End of variables declaration//GEN-END:variables
 }

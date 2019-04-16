@@ -12,6 +12,8 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup5">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup6">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -53,6 +55,10 @@
                               <Component id="workWeek20" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="workWeek30" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="workWeekCustom" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="customHourWeekInput" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -212,6 +218,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="workWeek20" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="workWeek30" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="workWeekCustom" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="customHourWeekInput" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -313,7 +321,6 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -340,7 +347,7 @@
                           <Component id="remaininglMinutes" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="remainingHours" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -661,6 +668,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="30 Hour Work Week"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="workWeek30ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel21">
       <Properties>
@@ -680,6 +690,22 @@
     <Component class="javax.swing.JFormattedTextField" name="monMins">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="workWeekCustom">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="buttonGroup1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Custom Hour Work Week"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="workWeekCustomActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="customHourWeekInput">
+      <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
