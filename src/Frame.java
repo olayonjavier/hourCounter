@@ -743,15 +743,34 @@ public class Frame extends javax.swing.JFrame {
         
 		if(workWeek20.isSelected()){
 			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, "20"));
+			if(totalHours >= 20){
+				remaininglMinutes.setText("0");	
+			}
+			else{
+				remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
+			}
 		}
 		else if(workWeek30.isSelected()){
 			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, "30"));
+			if(totalHours >= 30){
+				remaininglMinutes.setText("0");	
+			}
+			else{
+				remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
+			}
 		}
 		else{
 			remainingHours.setText("" + hourcounter.HourCounter.getMissingHours((hourcounter.HourCounter.convertHoursToMinutes(totalHours)) + totalMinutes, customHourWeekInput.getText()));
+			if(totalHours >= Integer.parseInt(customHourWeekInput.getText())){
+				remaininglMinutes.setText("0");	
+			}
+			else{
+				remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
+			}
 		}
 		
-		remaininglMinutes.setText("" + hourcounter.HourCounter.getMissingMinutes(totalMinutes));
+		
+		
     }//GEN-LAST:event_calculateActionPerformed
 
     private void workWeek20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_workWeek20ActionPerformed
